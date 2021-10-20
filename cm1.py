@@ -2,7 +2,7 @@
 
 import matplotlib.pyplot as plt
 
-with open("cm1_l2.out") as f:
+with open("cm1_l1.out") as f:
     data = f.read().split("\n")[:-1]
 
 
@@ -39,6 +39,7 @@ for k in res:
     misses = list(map(lambda x: x.misses, res[k]))
     plt.plot(strides, misses, label=str(k >> 10)+"k")
     plt.legend()
-    plt.xscale("log", base=2)
+    plt.xscale("log")
 
+#plt.savefig("cm1L1Plots/cm1 L1 - 1")
 plt.show()
