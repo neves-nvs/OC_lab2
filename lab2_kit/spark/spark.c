@@ -17,7 +17,7 @@ double get_elapsed(struct timespec const *start) {
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &end);
 
     double nanoseconds = ((end.tv_sec - start->tv_sec) * 1000000000) +
-                         (end.tv_nsec - start->tv_sec);
+                         (end.tv_nsec - start->tv_nsec);
     return nanoseconds / 1000000000.0;
 }
 
