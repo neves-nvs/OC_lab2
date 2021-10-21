@@ -23,7 +23,7 @@ void setup(int16_t m1[N][N], int16_t m2[N][N], int16_t m3[N][N]) {
     /*      MATRIX TRANSPOSITION        */
     /************************************/
 
-    transpose(tmp, m2);
+    //transpose(tmp, m2);
 }
 
 void transpose(int16_t m[N][N], int16_t res[N][N]) {
@@ -109,7 +109,9 @@ int main() {
     /* Gets the starting time in microseconds */
     long long const start_usec = PAPI_get_real_usec();
 
-    multiply_matrices(mul1, mul2, res);
+    int16_t mul2_transposed[N][N];
+    transpose(mul2, mul2_transposed);
+    multiply_matrices(mul1, mul2_transposed, res);
 
     /************************************/
 
