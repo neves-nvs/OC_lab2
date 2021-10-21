@@ -5,7 +5,7 @@
 #include <stdlib.h> // exit()
 #include <string.h>
 
-#define CACHE_MIN (16 * 1024)
+#define CACHE_MIN (32 * 1024)	
 #define CACHE_MAX (1024 * 1024)
 #define N_REPETITIONS (200)
 
